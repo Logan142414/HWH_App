@@ -13,10 +13,21 @@ with open("xgb_model.pkl", "rb") as f:
 
 
 # --- Streamlit App Layout ---
-st.image("elon_logo.png", width=120)
-st.image("HWH_logo.png", width=120)
 st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
-st.title("Predicting Graduation/Preview Period")
+
+# --- Top row with Elon and HWH logos ---
+col1, col2, col3 = st.columns([1, 6, 1])
+
+with col1:
+    st.image("elon_logo.png", width=120)
+
+with col2:
+    st.markdown("<h2 style='text-align: center; margin-top: 15px;'>Predicting Graduation/Preview Period</h2>", unsafe_allow_html=True)
+
+with col3:
+    st.image("HWH_logo.png", width=120)
+
+# --- Subtitle below the header ---
 st.subheader("Made By Elon University")
 
 
