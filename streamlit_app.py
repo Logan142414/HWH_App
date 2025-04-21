@@ -61,15 +61,15 @@ featureSSF = ['ssf_initial:adult_education', 'ssf_initial:child_care',
 # --- Predict ---
 
 
-if st.button("Predict Probability for Passing Preview Period (>12)"):
-    input_df = pd.DataFrame([features], columns=featureSSF)
-    prob = model.predict_proba(input_df)[0][1]
-    if prob > 0.8:
-        st.success(f"High chance of passing preview: {prob:.2%}")
-    elif prob > 0.4:
-        st.warning(f"Moderate chance of passing preview: {prob:.2%}")
-    else:
-        st.error(f"Low chance of passing preview: {prob:.2%}")
+#if st.button("Predict Probability for Passing Preview Period (>12)"):
+   # input_df = pd.DataFrame([features], columns=featureSSF)
+   # prob = model.predict_proba(input_df)[0][1]
+   # if prob > 0.8:
+       # st.success(f"High chance of passing preview: {prob:.2%}")
+   # elif prob > 0.4:
+       # st.warning(f"Moderate chance of passing preview: {prob:.2%}")
+   # else:
+   #     st.error(f"Low chance of passing preview: {prob:.2%}")
 
 
 #if st.button("Predict Probability for Graduation"):
@@ -81,3 +81,27 @@ if st.button("Predict Probability for Passing Preview Period (>12)"):
         #st.warning(f"Moderate chance of graduation: {prob:.2%}")
     #else:
         #st.error(f"Low chance of graduation: {prob:.2%}")
+
+
+if st.button("Predict Probabilities"):
+    input_df = pd.DataFrame([features], columns=featureSSF)
+
+    # --- Preview Period Prediction ---
+    prob_preview = model.predict_proba(input_df)[0][1]
+    st.markdown("### 📊 Preview Period Prediction")
+    if prob_preview > 0.8:
+        st.success(f"High chance of passing preview: {prob_preview:.2%}")
+    elif prob_preview > 0.4:
+        st.warning(f"Moderate chance of passing preview: {prob_preview:.2%}")
+    else:
+        st.error(f"Low chance of passing preview: {prob_preview:.2%}")
+
+    # --- Graduation Prediction ---
+    prob_grad = model.predict_proba(input_df)[0][1]
+    st.markdown("### 🎓 Graduation Prediction")
+    if prob_grad > 0.8:
+        st.success(f"High chance of graduating: {prob_grad:.2%}")
+    elif prob_grad > 0.4:
+        st.warning(f"Moderate chance of graduating: {prob_grad:.2%}")
+    else:
+        st.error(f"Low chance of graduating: {prob_grad:.2%}")
