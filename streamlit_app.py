@@ -88,6 +88,8 @@ if st.button("Predict Probabilities"):
 
     # --- Preview Period Prediction ---
     prob_preview = model.predict_proba(input_df)[0][1]
+    
+with st.container():
     st.markdown("### 📊 Preview Period Prediction")
     if prob_preview > 0.8:
         st.success(f"High chance of passing preview: {prob_preview:.2%}")
@@ -105,3 +107,6 @@ if st.button("Predict Probabilities"):
         st.warning(f"Moderate chance of graduating: {prob_grad:.2%}")
     else:
         st.error(f"Low chance of graduating: {prob_grad:.2%}")
+
+
+
