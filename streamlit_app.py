@@ -27,6 +27,6 @@ for name in feature_names:
 
 # --- Predict ---
 if st.button("Predict Probability"):
-    input_array = np.array([features])  # Shape = (1, 11)
-    prob = model.predict_proba(input_array)[0][1]  # Probability for class 1
+    input_df = pd.DataFrame([features], columns=feature_names)
+    prob = model.predict_proba(input_df)[0][1]
     st.success(f"Predicted Probability: {prob:.2%}")
