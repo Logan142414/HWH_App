@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+from xgboost import XGBClassifier
 
 # --- Load saved model ---
 with open("xgb_model.pkl", "rb") as f:
