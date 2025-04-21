@@ -26,8 +26,14 @@ for name in feature_names:
     val = st.slider(f"{name.replace('_', ' ').title()}", min_value=1, max_value=5, step=1)
     features.append(val)
 
+featureSSF = ['ssf_initial:adult_education', 'ssf_initial:child_care',
+       'ssf_initial:community', 'ssf_initial:employment',
+       'ssf_initial:housing', 'ssf_initial:income', 'ssf_initial:math_skills',
+       'ssf_initial:mental_health', 'ssf_initial:reading_skills',
+       'ssf_initial:social', 'ssf_initial:substance_abuse']
+
 # --- Predict ---
 if st.button("Predict Probability"):
-    input_df = pd.DataFrame([features], columns=feature_names)
+    input_df = pd.DataFrame([features], columns=featureSSF)
     prob = model.predict_proba(input_df)[0][1]
     st.success(f"Predicted Probability: {prob:.2%}")
