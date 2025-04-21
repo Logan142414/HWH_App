@@ -3,5 +3,5 @@ pandas
 joblib
 scikit-learn
 imblearn
-
+xgboost
 
