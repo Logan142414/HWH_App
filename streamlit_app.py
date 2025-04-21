@@ -13,10 +13,12 @@ with open("xgb_model.pkl", "rb") as f:
 
 
 # --- Streamlit App Layout ---
+st.image("elon_logo.png", width=120)
+st.image("HWH_logo.png", width=120)
 st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
 st.title("Predicting Graduation/Preview Period")
 st.subheader("Made By Elon University")
-st.image("elon_logo.png", width=120)
+
 
 st.write("Use the sliders below to set your inputs:")
 
