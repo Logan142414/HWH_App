@@ -42,7 +42,7 @@ feature_names = [
 
 # --- Streamlit radio buttons for each feature ---
 features = []
-with st.expander("Adjust Your Survey Scores", expanded=True):
+with st.expander("Adjust SSF_initial scores", expanded=True):
     for name in feature_names:
         val = st.radio(
             f"{name.replace('_', ' ').title()}",
