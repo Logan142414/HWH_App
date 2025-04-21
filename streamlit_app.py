@@ -3,9 +3,14 @@ import pickle
 import numpy as np
 import pandas as pd
 
-# --- Load saved model ---
+# --- Load saved model. Preview Period ---
 with open("xgb_model.pkl", "rb") as f:
     model = pickle.load(f)
+
+# --- Load saved model. Graduation ---
+#with open("xgb_model.pkl", "rb") as f:
+    #modelgrad = pickle.load(f)
+
 
 # --- Streamlit App Layout ---
 st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
@@ -53,12 +58,12 @@ if st.button("Predict Probability for Passing Preview Period (>12)"):
         st.error(f"Low chance of passing preview: {prob:.2%}")
 
 
-if st.button("Predict Probability for Graduation"):
-    input_df = pd.DataFrame([features], columns=featureSSF)
-    prob = model.predict_proba(input_df)[0][1]
-    if prob > 0.8:
-        st.success(f"High chance of graduation: {prob:.2%}")
-    elif prob > 0.4:
-        st.warning(f"Moderate chance of graduation: {prob:.2%}")
-    else:
-        st.error(f"Low chance of graduation: {prob:.2%}")
+#if st.button("Predict Probability for Graduation"):
+   # input_df = pd.DataFrame([features], columns=featureSSF)
+    #prob = modelgrad.predict_proba(input_df)[0][1]
+    #if prob > 0.8:
+        #st.success(f"High chance of graduation: {prob:.2%}")
+    #elif prob > 0.4:
+        #st.warning(f"Moderate chance of graduation: {prob:.2%}")
+    #else:
+        #st.error(f"Low chance of graduation: {prob:.2%}")
