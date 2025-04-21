@@ -42,7 +42,7 @@ feature_names = [
 
 # --- Streamlit radio buttons for each feature ---
 features = []
-with st.expander(expanded=True):
+with st.expander("",expanded=True):
     for name in feature_names:
         val = st.radio(
             f"{name.replace('_', ' ').title()}",
