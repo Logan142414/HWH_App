@@ -8,8 +8,8 @@ with open("xgb_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # --- Streamlit App Layout ---
-st.set_page_config(page_title="HWH Graduation/Preview Period Predictors", layout="centered")
-st.title("HWH Graduation/Preview Period Predictors")
+st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
+st.title("Predicting Graduation/Preview Period")
 st.subheader("Made By Elon University")
 
 st.write("Use the sliders below to set your inputs:")
