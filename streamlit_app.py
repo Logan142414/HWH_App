@@ -33,6 +33,12 @@ featureSSF = ['ssf_initial:adult_education', 'ssf_initial:child_care',
        'ssf_initial:social', 'ssf_initial:substance_abuse']
 
 # --- Predict ---
+if st.button("Predict Probability for Graduation"):
+    input_df = pd.DataFrame([features], columns=featureSSF)
+    prob = model.predict_proba(input_df)[0][1]
+    st.success(f"Predicted Probability: {prob:.2%}")
+
+
 if st.button("Predict Probability for Passing Preview Period (>12)"):
     input_df = pd.DataFrame([features], columns=featureSSF)
     prob = model.predict_proba(input_df)[0][1]
