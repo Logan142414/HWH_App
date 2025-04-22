@@ -13,7 +13,7 @@ with open("xgb_model.pkl", "rb") as f:
 
 
 # --- Streamlit App Layout ---
-st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
+#st.set_page_config(page_title="Predicting Graduation/Preview Period", layout="centered")
 st.markdown("<h1 style='font-size: 30px;'>Predicting Graduation / Preview Period</h1>", unsafe_allow_html=True)
 
 # --- Top row with Elon and HWH logos ---
