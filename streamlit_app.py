@@ -31,7 +31,7 @@ with col3:
 st.subheader("Made By Elon University")
 
 
-st.write("Use the sliders below to set your inputs:")
+st.write("Use the buttons below to choose a value:")
 
 # --- Input sliders (customize ranges based on your model features) ---
 
