@@ -89,7 +89,7 @@ if st.button("Predict Probabilities"):
 
     # --- Preview Period Prediction ---
     prob_preview = model.predict_proba(input_df)[0][1]
-    st.markdown("### 📊 Likelihood Continuing after 12 days")
+    st.markdown("### 📊 Likelihood Of Continuing After 12 Days")
     if prob_preview > 0.8:
         st.success(f"High chance of passing period: {prob_preview:.2%}")
     elif prob_preview > 0.4:
