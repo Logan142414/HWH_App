@@ -8,8 +8,8 @@ with open("xgb_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # --- Load saved model. Graduation ---
-#with open("xgb_model.pkl", "rb") as f:
-    #modelgrad = pickle.load(f)
+with open("grad_deploy_xgb_model.pkl", "rb") as f:
+    modelgrad = pickle.load(f)
 
 
 # --- Streamlit App Layout ---
@@ -98,7 +98,7 @@ if st.button("Predict Probabilities"):
         st.error(f"Low chance of passing period: {prob_preview:.2%}")
 
     # --- Graduation Prediction ---
-    prob_grad = model.predict_proba(input_df)[0][1]
+    prob_grad = modelgrad.predict_proba(input_df)[0][1]
     st.markdown("### 🎓 Graduation Prediction")
     if prob_grad > 0.8:
         st.success(f"High chance of graduating: {prob_grad:.2%}")
