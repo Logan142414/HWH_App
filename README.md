@@ -67,7 +67,7 @@
 ## Documents
 
 * **Project Overview:** [HWH Project Overview.pdf](Project%20and%20HWH%20Overview.pdf)
-* **Streamlit App:** (https://hwhelonscore.streamlit.app/)
+* **Streamlit App:** https://hwhelonscore.streamlit.app/
 * **Data Dictionary & Datasets:** [Dictionary and Data Sets.zip](./Data Sets/Dictionary and Data Sets.zip)
 
 ---
