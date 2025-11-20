@@ -67,7 +67,7 @@
 ## Documents
 
 * **Project Overview:** [HWH Project Overview.pdf](Project%20and%20HWH%20Overview.pdf)
-* **Streamlit App:** [The_Gamblers_Final_Version_1.ipynb](./The_Gamblers_Final_Version_1.ipynb)
+* **Streamlit App:** (https://hwhelonscore.streamlit.app/)
 * **Data Dictionary & Datasets:** [Dictionary and Data Sets.zip](./Data Sets/Dictionary and Data Sets.zip)
 
 ---
