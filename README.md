@@ -58,7 +58,7 @@
 ## Results & Business Recommendations
 
 * Identified key features impacting Preview Period and Graduation success
-* Delivered a tool to guide admissions and resource allocation
+* Delivered a tool to guide admissions decisions 
 * Provided insights for improving data collection and tracking early signals of success
 * Future recommendations include integrating early mood data and enabling CSV batch input for applicants in the Streamlit app
 
@@ -68,7 +68,6 @@
 
 * **Project Overview:** [HWH Project Overview.pdf](Project%20and%20HWH%20Overview.pdf)
 * **Streamlit App:** https://hwhelonscore.streamlit.app/
-* **Data Dictionary & Datasets:** [Dictionary and Data Sets.zip](./Data Sets/Dictionary and Data Sets.zip)
 
 ---
 
