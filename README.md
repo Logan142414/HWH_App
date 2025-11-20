@@ -32,29 +32,26 @@
 
 * Daily mood data, applicant data, student performance data (>120 columns, some missing values)
 * Arizona Self-Sufficiency Scale (AZ SSS) for initial assessments
-
+  
 ### **Modeling**
 
-* XGBoost Models for Graduation prediction
-* PyTorch Neural Network used for Preview Period (>12 days) classification
+* XGBoost Models for Graduation prediction 
+* PyTorch Neural Network used for Preview Period (>12 days) classification 
 * Data preprocessing, feature selection, and exploratory analysis performed in Python
 
 ### **Deployment**
 
-* **Streamlit App:** Allows staff to enter data and receive predictions
-* Provides probabilistic output with color-coded risk (high, moderate, low)
-* Includes app branding with logos
+* Streamlit App: Allows staff to enter data and receive predictions 
+* Provides probabilistic output with color coded risk (high, moderate, low) 
 
 ---
 
 ## Skills Demonstrated
 
-* Python data cleaning and preprocessing (Pandas, NumPy)
-* Machine learning modeling (XGBoost, PyTorch NN)
+* Python data cleaning and preprocessing (Pandas, NumPy) 
 * Exploratory data analysis and feature selection
-* Streamlit app development for user-friendly interface
-* Data visualization for stakeholder communication
-* Presenting results to leadership in Denver
+* Machine learning modeling (Regression, XGBoost, PyTorch NN, Random Forest) 
+* Presenting results to nontechnical leadership in Denver
 
 ---
 
