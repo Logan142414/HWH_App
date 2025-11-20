@@ -10,11 +10,11 @@
 
 ## Executive Summary
 
-**Business Problem:** Housed, Working, and Healthy (HWH) is a non-profit supporting individuals transitioning into sustained employment. With limited program slots (7 per month), HWH needed a data-driven way to decide which applicants are likely to complete their Preview Period (>12 days) and ultimately graduate.
+**Business Problem:** Housed, Working, and Healthy (HWH) is a non-profit supporting individuals transitioning into sustained employment. With limited program slots, HWH needed a data-driven approach to determine which applicants are likely to complete their Preview Period and ultimately graduate.
 
-**Solution:** Developed two classification models; one predicting Preview Period success and one predicting graduation using historical applicant data, SSF scores, and exploratory analysis. A Streamlit app allows HWH staff to enter applicant data and receive predictive probabilities.
+**Solution:** Developed two classification models; one predicting if the Preview Period is passed, and one predicting graduation using historical applicant data, SSF scores, and exploratory analysis. A Streamlit app allows HWH staff to enter applicant data and receive probabilities.
 
-**Impact:** The solution enables HWH to make informed admissions decisions, improve program completion rates, and focus resources on candidates most likely to benefit from the program.
+**Impact:** The solution enables HWH to use this "Elon Score" to be a factor to help make admissions decisions, improve program completion rates, and focus resources on candidates most likely to benefit from the program.
 
 ---
 
@@ -22,7 +22,7 @@
 
 * **Non-profit relevance:** Only a few applicants can be accepted each month; selecting the right participants is crucial.
 * **Operational context:** HWH runs programs Tue-Fri with structured roles (Recruiters, Case Managers, Chefs, Employment Coaches, etc).
-* **Data-driven need:** Incorporating applicant and early SSF data allows identification of key factors driving student success.
+* **Predictive Data Use:** Using applicant and early SSF data allows HWH to predict a candidate’s likelihood of success before they are accepted into the program.
 
 ---
 
@@ -30,28 +30,31 @@
 
 ### **Data**
 
-* Daily mood data, applicant data, student performance data (>120 columns, some missing values)
-* Arizona Self-Sufficiency Scale (AZ SSS) for initial assessments
-  
+*Daily mood data, applicant data, student performance data (>120 columns)
+*Arizona Self-Sufficiency Scale (AZ SSS) for initial assessments
+*Using this data allows HWH to predict a candidate’s likelihood of success before acceptance
+
 ### **Modeling**
 
-* XGBoost Models for Graduation prediction 
-* PyTorch Neural Network used for Preview Period (>12 days) classification 
-* Data preprocessing, feature selection, and exploratory analysis performed in Python
+* Classification Models: XGBoost (Graduation), PyTorch Neural Network (Preview Period >12 days), Random Forest
+* Model Development & Evaluation: Cross-validation, SMOTE oversampling, GridSearchCV hyperparameter tuning, H20: Model Selection
+* Performance Metrics: Accuracy, F1 score, Precision, Recall, AUC
+* Feature Selection & Importance: Exploratory data analysis, SHAP values, domain feature engineering
 
 ### **Deployment**
 
-* Streamlit App: Allows staff to enter data and receive predictions 
-* Provides probabilistic output with color coded risk (high, moderate, low) 
+* Streamlit App: Interface to input applicant data and receive probabilistic predictions
+* Color coded risk output (high, moderate, low)
+
 
 ---
 
 ## Skills Demonstrated
 
-* Python data cleaning and preprocessing (Pandas, NumPy) 
+* Python data cleaning and preprocessing (Pandas, NumPy)
 * Exploratory data analysis and feature selection
-* Machine learning modeling (Regression, XGBoost, PyTorch NN, Random Forest) 
-* Presenting results to nontechnical leadership in Denver
+* End-to-end machine learning workflow (modeling, evaluation, tuning, feature importance)
+* Presenting insights and predictions to nontechnical leadership
 
 ---
 
@@ -75,4 +78,4 @@
 
 * Housed, Working, and Healthy (HWH) staff and leadership
 * Elon University Center for Organizational Analytics
-* Intern team and mentors
+* Team and mentors
