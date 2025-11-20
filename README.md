@@ -3,6 +3,7 @@
 ### *Machine Learning Application for HWH Non-Profit*
 
 **Team:** Brandon Feld, Logan Laszewski, Eric Rich, Adam Shirley  (Advisor: Vinayaka Gude)
+
 **Club/Internship:** Elon University, Center for Organizational Analytics (Sept 2024 - May 2025)
 
 ---
